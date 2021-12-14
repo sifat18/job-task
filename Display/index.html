@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        section {
+            width: 500px;
+            height: 250px;
+            margin: 2rem auto;
+            border: 1px solid black;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        h2,
+        .header {
+            margin-left: 2rem;
+        }
+
+        .header:hover+.hide {
+            display: block;
+            color: red;
+            margin-left: 2rem;
+
+        }
+
+        .clickable {
+            display: none;
+            margin-left: 2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h2>Display an Element on Hover</h2>
+
+        <div class="header">Topic Header.</div>
+        <p class="hide">I am shown when someone hovers over the div above.</p>
+        <p class="clickable">I am shown when someone hovers over the div above. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Voluptates doloribus earum alias deleniti, labore distinctio tempora voluptatem iure
+            fugiat veritatis iste sequi ducimus molestiae quis perspiciatis obcaecati, minus, adipisci dicta.</p>
+    </section>
+    <script>
+        const head = document.querySelector('.header');
+        let clickable = document.querySelector('.clickable');
+        let hide = document.querySelector('.hide');
+        head.addEventListener('click', () => {
+            clickable.classList.toggle('clickable')
+        })
+    </script>
+</body>
+
+</html>
