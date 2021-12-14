@@ -5,11 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Draggrable</title>
 </head>
 
 <body>
+    <div id="myModal" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <button id='back'>back of others</button>
+                <button id='front'>front of others</button>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+
+    </div>
+    <!-- shapes  -->
+    <div class="container" id='container'>
+        <div class="square dragable empty " draggable="true"></div>
+        <div class="circle dragable empty" draggable="true"></div>
+        <div class="triangle-up dragable empty" draggable="true"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
