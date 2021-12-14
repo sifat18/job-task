@@ -67,8 +67,11 @@ span.onclick = function () {
 
 back.addEventListener('click', () => {
     let drag = document.querySelector('.check')
-    drag.style.zIndex = "1"
-    drag.style.position = "absolute"
+    // drag.style.zIndex = "1"
+    // drag.style.position = "absolute"
+    drag.classList.add('set-back')
+    drag.classList.remove('set-front')
+
     modal.style.display = "none";
     drag.classList.remove('check')
     console.log(drag);
@@ -77,8 +80,10 @@ back.addEventListener('click', () => {
 // bring the item to front  
 front.addEventListener('click', () => {
     let drag = document.querySelector('.check')
-    drag.style.zIndex = "3"
-    drag.style.position = "absolute"
+    // drag.style.zIndex = "3"
+    // drag.style.position = "absolute"
+    drag.classList.add('set-front')
+    drag.classList.remove('set-back')
 
     modal.style.display = "none";
     drag.classList.remove('check')

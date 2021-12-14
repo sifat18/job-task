@@ -116,6 +116,14 @@ opacity: 0.5;
         background-color: #5cb85c;
         color: white;
       }
+      .set-back{
+          z-index: 1;
+          position: absolute;
+      }
+      .set-front{
+          z-index: 3;
+          position: absolute;
+      }
 
       .check{
           color:#fff
